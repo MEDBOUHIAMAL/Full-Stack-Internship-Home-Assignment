@@ -1,5 +1,34 @@
 ## DNA Engineering Full-Stack Assignment
 Build a CSV Parser.
+# CSV Parser
+
+## Table of Contents
+- [Demo Video](#demo-video)
+- [CSV Parser Backend](#csv-parser-backend)
+  - [Approach](#approach)
+    - [Employee Model](#employee-model)
+    - [CsvParser Interface](#csvparser-interface)
+    - [CsvParserImpl Implementation](#csvparserimpl-implementation)
+    - [ParserService](#parserservice)
+    - [ParseController](#parsecontroller)
+  - [Instructions](#instructions)
+    - [Instructions to Run the Backend](#instructions-to-run-the-backend)
+    - [Instructions to Run Unit Tests](#instructions-to-run-unit-tests)
+  - [Unit Tests](#unit-tests)
+    - [EmployeeTest](#employeetest)
+    - [CsvParserImplTest](#csvparserimpltest)
+    - [ParserServiceTest](#parserservicetest)
+  - [Test Endpoints](#test-endpoints)
+    - [Using Postman](#using-postman)
+      - [1. Upload CSV](#1-upload-csv)
+      - [2. Get All Employees](#2-get-all-employees)
+      - [3. Get Results (Average Salaries)](#3-get-results-average-salaries)
+- [CSV Parser Frontend](#csv-parser-frontend)
+  - [Project Structure](#project-structure)
+  - [Dependencies](#dependencies)
+  - [Instructions to Run](#instructions-to-run)
+  - [Usage](#usage)
+
 # Demo Video
 [Watch Demo Video](https://drive.google.com/file/d/1-oaK8OdXHSDi60gbBo5uUSXfDcYhZXbG/view?usp=sharing)
 
@@ -111,6 +140,7 @@ This is the frontend part of the CSV Parser application built using Next.js.
 
 ![Interface 3](./static/Interface3.png)
 *Caption for Interface 3*
+
 
 ## Table of content
 - [Prerequisites](#prerequisites)

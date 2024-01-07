@@ -1,31 +1,33 @@
 ## DNA Engineering Full-Stack Assignment
 Build a CSV Parser.
+# Demo Video
+[Watch Demo Video](https://drive.google.com/file/d/1-oaK8OdXHSDi60gbBo5uUSXfDcYhZXbG/view?usp=sharing)
 
-## Demo Video
-[Watch Demo Video](lien-vers-votre-video-sur-google-drive)
+# CSV Parser Backend
+## Approach
 
-## Backend
-### Approach
-## Employee Model
+### Employee Model
 The `Employee` class is a simple Java model representing the structure of an employee. It includes fields for the employee's ID, name, job title, and salary. The use of Lombok annotations (`@Getter`, `@Setter`, `@NoArgsConstructor`, `@AllArgsConstructor`, `@ToString`) helps reduce boilerplate code.
 
-## CsvParser Interface
+### CsvParser Interface
 The `CsvParser` interface defines a method `parseCsv` that takes an `InputStream` as input and returns a list of `Employee` objects. This interface provides a contract for different implementations of CSV parsers.
 
-## CsvParserImpl Implementation
+### CsvParserImpl Implementation
 The `CsvParserImpl` class implements the `CsvParser` interface. It uses a `BufferedReader` to read the CSV data line by line, skipping the header. It then parses each line into `Employee` objects and adds them to a list.
 
-## ParserService
+### ParserService
 The `ParserService` class is responsible for handling the logic related to CSV file processing. It uses the `CsvParser` to parse the CSV file and stores the data in a list of `Employee` objects. It provides methods to retrieve all employees and calculate average salaries based on job titles.
 
-## ParseController
+### ParseController
 The `ParseController` is a Spring MVC controller that handles HTTP requests related to CSV parsing. It uses the `ParserService` to upload, process, and retrieve data. It includes endpoints for uploading a CSV file, getting a list of all employees, and retrieving average salaries by job title.
 
-### Instructions 
+## Instructions 
 
-- **Instructions to Run the Backend**: mvn spring-boot:run
-        - The backend server should be accessible at http://localhost:8080.
-- **Instructions to Run Unit Tests**: mvn test  
+- **Instructions to Run the Backend**: `mvn spring-boot:run`
+  - The backend server should be accessible at [http://localhost:8080](http://localhost:8080).
+  
+- **Instructions to Run Unit Tests**: `mvn test`
+
 ## Unit Tests
 
 ### EmployeeTest
@@ -37,30 +39,78 @@ A unit test for the `CsvParserImpl` class validates that the `parseCsv` method c
 ### ParserServiceTest
 Unit tests for the `ParserService` class validate the correct parsing and processing of a CSV file. One test checks that the upload and processing of a valid input file result in the correct number of stored employees. Another test ensures that the calculation of average salaries returns the expected map of job titles and their corresponding average salaries.
 
+![Unit Tests](./static/JunitTests.png)
 
-(./static/JunitTests.png)
+# Test Endpoints
 
-## Test Endpoints
+## Using Postman
 
-### Using Postman
-#### 1. Upload CSV
+### 1. Upload CSV
 - **Method:** `POST`
-- **Endpoint:** `http://localhost:8080/api/csvparser/upload`
+- **Endpoint:** [http://localhost:8080/api/csvparser/upload](http://localhost:8080/api/csvparser/upload)
 - **Description:** Upload a CSV file for processing.
-(./static/upload.png)
 
-#### 2. Get All Employees
+![Upload CSV](./static/upload.png)
+
+### 2. Get All Employees
 - **Method:** `GET`
-- **Endpoint:** `http://localhost:8080/api/csvparser/employees`
+- **Endpoint:** [http://localhost:8080/api/csvparser/employees](http://localhost:8080/api/csvparser/employees)
 - **Description:** Retrieve a list of all employees.
-(./static/employeesInformations.png)
 
-#### 3. Get Results (Average Salaries)
+![Get All Employees](./static/employeesInformations.png)
+
+### 3. Get Results (Average Salaries)
 - **Method:** `GET`
-- **Endpoint:** `http://localhost:8080/api/csvparser/results`
+- **Endpoint:** [http://localhost:8080/api/csvparser/results](http://localhost:8080/api/csvparser/results)
 - **Description:** Retrieve average salaries based on job titles.
-(./static/averageSalary.png)
- 
+
+![Get Results](./static/averageSalary.png)
+
+# CSV Parser Frontend
+
+This is the frontend part of the CSV Parser application built using Next.js.
+
+## Project Structure
+
+- **components**: React components for different parts of the application.
+  - **EmployeeTable.js**: Component for displaying a paginated table of employees.
+  - **FileUpload.js**: Component for handling file uploads and triggering CSV processing.
+  - **JobSummaryTable.js**: Component for displaying a paginated table of job summaries.
+  - **Tables.js**: Component for rendering both `EmployeeTable` and `JobSummaryTable`.
+- **hooks**: Custom React hooks.
+  - **useCSVParser.js**: Hook for managing file upload, data fetching, and state related to employees and job summaries.
+- **pages**: Next.js pages.
+  - **index.js (Home.js)**: Main page that integrates components and hooks to create the application.
+- **services**: API service functions.
+  - **api.js**: Functions for interacting with the backend API.
+
+## Dependencies
+
+- **axios**: HTTP client for making API requests.
+- **react**: JavaScript library for constructing user interfaces.
+- **react-dom**: Entry point to the DOM and server renderers for React.
+- **react-paginate**: React component for handling pagination.
+- **tailwindcss**: Utility-first CSS framework for styling.
+
+## Instructions to Run: `npm run dev`
+
+## Usage
+
+1. Select a CSV file using the **FileUpload** component.
+2. Click the "Process file" button to upload and process the CSV file.
+3. The processed data will be presented in tables: **Employee Information** and **Jobs Summary**.
+
+![Interface 1](./static/Interface1.png)
+*Caption for Interface 1*
+
+![File Select](./static/fileSelect.png)
+*Caption for File Select*
+
+![Interface 2](./static/Interface2.png)
+*Caption for Interface 2*
+
+![Interface 3](./static/Interface3.png)
+*Caption for Interface 3*
 
 ## Table of content
 - [Prerequisites](#prerequisites)

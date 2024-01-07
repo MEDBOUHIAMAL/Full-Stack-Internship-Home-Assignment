@@ -1,4 +1,3 @@
-// Fichier Home.js
 import React from 'react';
 import FileUpload from '@/components/FileUpload';
 import Tables from '@/components/Tables';

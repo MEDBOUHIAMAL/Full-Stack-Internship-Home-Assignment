@@ -18,15 +18,15 @@ class ParserServiceTest {
 
     @Test
     void uploadAndProcessCsv_ValidInput_ParsesAndStoresData() throws IOException {
-        // Arrange
+
         InputStream inputStream = getClass().getResourceAsStream("/test-employees.csv");
         MockMultipartFile file = new MockMultipartFile("file", "test-employees.csv", "text/csv", inputStream);
 
-        // Act
+
         parserService.uploadAndProcessCsv(file);
         List<Employee> employees = parserService.getAllEmployees();
 
-        // Assert
+
         assertNotNull(employees);
         assertEquals(2, employees.size()); // Assuming your test-employees.csv file has 2 lines excluding the header
     }

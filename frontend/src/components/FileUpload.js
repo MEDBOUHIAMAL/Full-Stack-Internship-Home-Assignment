@@ -1,4 +1,3 @@
-// Fichier FileUpload.js
 import React, { useState } from 'react';
 
 const FileUpload = ({ onFileChange, onProcessClick, showTables }) => {

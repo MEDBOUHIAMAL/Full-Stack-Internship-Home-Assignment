@@ -23,7 +23,7 @@ public class ParserService {
              BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
 
             employeesData = reader.lines()
-                    .skip(1) // Skip header
+                    .skip(1) // ToSkip header
                     .map(this::mapToEmployee)
                     .collect(Collectors.toList());
         }

@@ -1,4 +1,3 @@
-// useCSVParser.js
 import { useState } from 'react';
 import { uploadFile, getEmployees, getJobSummary } from '@/services/api';
 

@@ -1,5 +1,3 @@
-## DNA Engineering Full-Stack Assignment
-Build a CSV Parser.
 # CSV Parser
 
 ## Table of Contents
@@ -15,8 +13,6 @@ Build a CSV Parser.
   - [Instructions to Run](#instructions-to-run)
   - [Usage](#usage)
 
-
-
 # Demo Video
 [Watch Demo Video](https://drive.google.com/file/d/1-oaK8OdXHSDi60gbBo5uUSXfDcYhZXbG/view?usp=sharing)
 
@@ -24,7 +20,6 @@ Build a CSV Parser.
 ## Approach
 
 *The provided Spring Boot backend application employs a simple CSV parsing strategy using a BufferedReader to read and process CSV content without relying on external libraries. This approach ensures efficiency and simplicity in handling CSV data.*
-
 
 ### Employee Model
 The `Employee` class is a simple Java model representing the structure of an employee. It includes fields for the employee's ID, name, job title, and salary. The use of Lombok annotations (`@Getter`, `@Setter`, `@NoArgsConstructor`, `@AllArgsConstructor`, `@ToString`) helps reduce boilerplate code.
@@ -131,6 +126,7 @@ This is the frontend part of the CSV Parser application built using Next.js.
 
 ![Interface 3](./static/Interface3.png)
 *Caption for Interface 3*
+
 
 
 ## Table of content

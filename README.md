@@ -5,15 +5,16 @@ Build a CSV Parser.
 ## Table of Contents
 - [Demo Video](#demo-video)
 - [CSV Parser Backend](#csv-parser-backend)
-  - [Approach](#approach)   
-  - [Instructions](#instructions)    
-  - [Unit Tests](#unit-tests)    
-  - [Test Endpoints](#test-endpoints)    
+  - [Approach](#approach)
+  - [Instructions](#instructions)
+  - [Unit Tests](#unit-tests)
+  - [Test Endpoints](#test-endpoints)
 - [CSV Parser Frontend](#csv-parser-frontend)
   - [Project Structure](#project-structure)
   - [Dependencies](#dependencies)
   - [Instructions to Run](#instructions-to-run)
   - [Usage](#usage)
+
 
 
 # Demo Video
@@ -111,7 +112,7 @@ This is the frontend part of the CSV Parser application built using Next.js.
 - **react-paginate**: React component for handling pagination.
 - **tailwindcss**: Utility-first CSS framework for styling.
 
-## Instructions to Run: `npm run dev`
+## Instructions to Run:  `npm run dev`
 
 ## Usage
 

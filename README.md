@@ -1,6 +1,67 @@
 ## DNA Engineering Full-Stack Assignment
 Build a CSV Parser.
 
+## Demo Video
+[Watch Demo Video](lien-vers-votre-video-sur-google-drive)
+
+## Backend
+### Approach
+## Employee Model
+The `Employee` class is a simple Java model representing the structure of an employee. It includes fields for the employee's ID, name, job title, and salary. The use of Lombok annotations (`@Getter`, `@Setter`, `@NoArgsConstructor`, `@AllArgsConstructor`, `@ToString`) helps reduce boilerplate code.
+
+## CsvParser Interface
+The `CsvParser` interface defines a method `parseCsv` that takes an `InputStream` as input and returns a list of `Employee` objects. This interface provides a contract for different implementations of CSV parsers.
+
+## CsvParserImpl Implementation
+The `CsvParserImpl` class implements the `CsvParser` interface. It uses a `BufferedReader` to read the CSV data line by line, skipping the header. It then parses each line into `Employee` objects and adds them to a list.
+
+## ParserService
+The `ParserService` class is responsible for handling the logic related to CSV file processing. It uses the `CsvParser` to parse the CSV file and stores the data in a list of `Employee` objects. It provides methods to retrieve all employees and calculate average salaries based on job titles.
+
+## ParseController
+The `ParseController` is a Spring MVC controller that handles HTTP requests related to CSV parsing. It uses the `ParserService` to upload, process, and retrieve data. It includes endpoints for uploading a CSV file, getting a list of all employees, and retrieving average salaries by job title.
+
+### Instructions 
+
+- **Instructions to Run the Backend**: mvn spring-boot:run
+        - The backend server should be accessible at http://localhost:8080.
+- **Instructions to Run Unit Tests**: mvn test  
+## Unit Tests
+
+### EmployeeTest
+A unit test for the `Employee` class ensures that an `Employee` object is created correctly with the expected values.
+
+### CsvParserImplTest
+A unit test for the `CsvParserImpl` class validates that the `parseCsv` method correctly returns a list of `Employee` objects from a valid CSV input file.
+
+### ParserServiceTest
+Unit tests for the `ParserService` class validate the correct parsing and processing of a CSV file. One test checks that the upload and processing of a valid input file result in the correct number of stored employees. Another test ensures that the calculation of average salaries returns the expected map of job titles and their corresponding average salaries.
+
+
+(./static/JunitTests.png)
+
+## Test Endpoints
+
+### Using Postman
+#### 1. Upload CSV
+- **Method:** `POST`
+- **Endpoint:** `http://localhost:8080/api/csvparser/upload`
+- **Description:** Upload a CSV file for processing.
+(./static/upload.png)
+
+#### 2. Get All Employees
+- **Method:** `GET`
+- **Endpoint:** `http://localhost:8080/api/csvparser/employees`
+- **Description:** Retrieve a list of all employees.
+(./static/employeesInformations.png)
+
+#### 3. Get Results (Average Salaries)
+- **Method:** `GET`
+- **Endpoint:** `http://localhost:8080/api/csvparser/results`
+- **Description:** Retrieve average salaries based on job titles.
+(./static/averageSalary.png)
+ 
+
 ## Table of content
 - [Prerequisites](#prerequisites)
 - [Before We begin](#before-we-begin)

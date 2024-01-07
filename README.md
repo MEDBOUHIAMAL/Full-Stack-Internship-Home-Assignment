@@ -35,6 +35,9 @@ Build a CSV Parser.
 # CSV Parser Backend
 ## Approach
 
+*The provided Spring Boot backend application employs a simple CSV parsing strategy using a BufferedReader to read and process CSV content without relying on external libraries. This approach ensures efficiency and simplicity in handling CSV data.*
+
+
 ### Employee Model
 The `Employee` class is a simple Java model representing the structure of an employee. It includes fields for the employee's ID, name, job title, and salary. The use of Lombok annotations (`@Getter`, `@Setter`, `@NoArgsConstructor`, `@AllArgsConstructor`, `@ToString`) helps reduce boilerplate code.
 

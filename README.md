@@ -107,7 +107,9 @@ This is the frontend part of the CSV Parser application built using Next.js.
 - **react-paginate**: React component for handling pagination.
 - **tailwindcss**: Utility-first CSS framework for styling.
 
-## Instructions to Run Frontend:  `npm run dev`
+## Instructions to Run Frontend
+
+  `npm run dev`
 
 ## Usage
 
